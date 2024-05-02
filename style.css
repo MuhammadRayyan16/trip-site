@@ -1,0 +1,464 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+:root{
+    --clr:#323648;
+    --mainclr:#f4b200;
+    --linkclr:#ddd;
+    --linkhover:#ff4f81;
+    --navhover:#333;
+}
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    transition: .2s;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+
+}
+.main-container{
+    background: url(images/background.jpg);
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.header{
+    padding: 2rem 7%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+.header.active{
+    background: var(--mainclr);
+    transition: .5s ease-in-out;
+}
+.header #logo{
+    font-size: 2.5rem;
+    color: var(--mainclr);
+    font-weight: bolder;
+}
+.navbar a{
+    margin-left: 1rem;
+    color: white;
+    font-size: 1.5rem;
+}
+.navbar.active{
+    left: 2rem;
+    transition: .5s ease-in-out;
+}
+.navbar a:hover{
+    color: var(--mainclr);
+}
+.icons div{
+    margin-left: 1rem;
+    font-size: 2.2rem;
+    color: white;
+}
+.icons div:hover{
+    color: var(--mainclr);
+    cursor: pointer;
+}
+.login-form-container{
+    position: absolute;
+    top: -1000%;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--clr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-form-container.active{
+    top: 100%;
+}
+.inner-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.inner-login input{
+    padding: 1.5rem;
+    width: 30rem;
+    border-radius: 15px;
+    outline: none;
+    border: 1px solid var(--linkhover);
+    margin-top: 1rem;
+}
+.inner-login a{
+    margin-top: 20px;
+    padding: 1.5rem;
+    background: var(--mainclr);
+    display: block;
+    width: 30rem;
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+}
+.inner-login a:hover{
+    color: var(--clr);
+}
+.main-background-content{
+    padding: 2rem 7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.main-background-content h1{
+    font-size: 30px;
+    color: white;
+    margin-bottom: 1rem;
+}
+.main-background-content h1 span{
+    color: var(--mainclr);
+}
+.main-background-content p{
+    color: white;
+    font-size: 1.5rem;
+}
+.inner-background-content{
+    flex: 1 1 45rem;
+}
+.main-form{
+    text-align: center;
+    background: var(--clr);
+    opacity: 0.9;
+    padding: 3rem 0;
+}
+.main-form h2{
+    color: white;
+    font-size: 30px;
+    padding-bottom: 1rem;
+}
+.main-inner-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.main-inner-form input{
+    padding: 1.5rem;
+    margin-left: .5rem;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    outline: none;
+    border: 1px solid var(--linkhover);
+}
+.main-form a{
+    display: block;
+    background: var(--mainclr);
+    width: 65%;
+    margin: 0 auto;
+    padding: 1.5rem 0;
+    font-size: 1.5rem;
+    color: white;
+
+}
+.main-form a:hover{
+    color: var(--clr);
+    letter-spacing: 3px;
+    border-radius: 15px;
+}
+.main-our-services{
+    padding: 3rem 7%;
+
+}
+.main-our-services h1{
+    color: var(--mainclr);
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.inner-main-services{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.inner-services{
+    flex: 1 1 300px;
+    padding: 4rem 1rem;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.inner-services:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.inner-services i{
+    color: var(--mainclr);
+    font-size: 30px;
+    padding: 1rem;
+}
+.inner-services h2{
+    font-size: 2rem;
+    padding: 1rem;
+}
+.inner-services p{
+    font-size: 1.5rem;
+}
+
+.main-gallery{
+    padding: 6rem 7%;
+}
+.main-gallery h1{
+    color: var(--mainclr);
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+.main-inner-gallery{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.inner-gallery{
+    flex: 1 1 300px;
+}
+.inner-gallery img{
+    transition: .5s;
+    width: 100%;
+}
+.inner-gallery img:hover{
+    transform: scale(0.9) rotate(15deg);
+    border-radius: 15px;
+}
+
+.main-guid{
+    padding: 3rem 7%;
+}
+.main-guid h1{
+    color: var(--mainclr);
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.main-inner-guid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    
+}
+.inner-guid{
+    flex: 1 1 200px;
+    position: relative;
+}
+.inner-guid:hover{
+    transform: translateY(-20px);
+}
+.inner-guid img{
+    width: 100%;
+}
+.inner-guid h2{
+    position: absolute;
+    background: var(--clr);
+    color: white;
+    width: 100%;
+    padding: 2rem;
+    bottom: 0;
+    text-align: center;
+}
+.main-prices-tour{
+    padding: 3rem 7%;
+}
+.main-prices-tour h1{
+    color: var(--mainclr);
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.main-tour-prices{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.inner-prices-image{
+    flex: 1 1 200px;
+}
+.inner-prices-image h2{
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+.inner-prices-image h2:hover{
+    color: var(--mainclr);
+}
+.inner-prices-image .price-inner img{
+    width: 100%;
+}
+.inner-prices-image .price-inner img:hover{
+    transform: scale(1.1);
+}
+.price-inner{
+    position: relative;
+}
+.price-inner span{
+    position: absolute;
+    background: var(--mainclr);
+    padding: 1.5rem 3rem;
+    color: white;
+    top: 5%;
+    right: 1rem;
+}
+.main-client-review{
+    padding: 5rem 7%;
+    background:var(--mainclr);
+}
+.main-client-review h1{
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    text-align: center;
+}
+.main-client{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.inner-review{
+    flex: 1 1 300px;
+    background: var(--clr);
+    padding: 5rem 2rem;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.inner-review:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    cursor: pointer;
+}
+.inner-review p{
+    color: white;
+    font-size: 1.5rem;
+}
+.inner-review img{
+    border-radius: 100%;
+    position: absolute;
+    width: 50px;
+    right: 2rem;
+   bottom:-10%;
+}
+
+.main-contact{
+    padding: 4rem 7%;
+}
+.main-contact h1{
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.main-get-touch{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.inner-get-touch{
+    flex: 1 1 45rem;
+}
+.inner-get-touch .myform{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 3rem;
+}
+.inner-get-touch .myform a{
+    padding: 1.5rem 3rem;
+    text-align: center;
+    color: white;
+    background: var(--mainclr);
+    font-size: 1.5rem;
+}
+.inner-get-touch .myform input{
+    padding: 1.5rem;
+    margin: 1rem;
+}
+.inner-get-touch img{
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:767px) {
+    
+html{
+    font-size: 50%;
+}
+.navbar{
+    position: absolute;
+    top: 100%;
+    left: -100%;
+    width: 30rem;
+    background: var(--clr);
+    height: 100vh;
+}
+.navbar a{
+    display: block;
+    padding: 1rem;
+    margin: 1rem;
+    font-size: 2rem;
+}
+
+
+
+
+
+
+
+
+}
