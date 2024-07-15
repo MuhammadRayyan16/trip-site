@@ -12,9 +12,11 @@ menubars.onclick = () => {
     mynav.classList.toggle('active');
 }
 
+
 loginform.onclick = () => {
     userlogin.classList.toggle('active');
 }
+
 
 const navbar = document.querySelector('.header');
 window.onscroll = () => {
