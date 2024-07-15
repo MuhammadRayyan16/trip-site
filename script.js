@@ -6,21 +6,22 @@ let loginform = document.querySelector('#myloginform');
 let userlogin = document.querySelector('.login-form-container');
 
 
-menubars.onclick = () =>{
+
+menubars.onclick = () => {
     menubars.classList.toggle('fa-times');
     mynav.classList.toggle('active');
 }
 
-loginform.onclick = () =>{
+loginform.onclick = () => {
     userlogin.classList.toggle('active');
 }
 
 const navbar = document.querySelector('.header');
-window.onscroll = () =>{
-    if(window.scrollY > 300){
+window.onscroll = () => {
+    if (window.scrollY > 300) {
         navbar.classList.add('active')
     }
-    else{
+    else {
         navbar.classList.remove('active');
     }
 }
