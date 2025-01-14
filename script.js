@@ -6,7 +6,6 @@ let loginform = document.querySelector('#myloginform');
 let userlogin = document.querySelector('.login-form-container');
 
 
-
 menubars.onclick = () => {
     menubars.classList.toggle('fa-times');
     mynav.classList.toggle('active');
